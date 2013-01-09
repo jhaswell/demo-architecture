@@ -1,0 +1,11 @@
+
+dependencies {
+    compile project(":core")
+    testCompile project(path: ":core", configuration: "tests")
+
+    testCompile(
+        "org.jboss.arquillian.junit:arquillian-junit-container:$arquillianJunitVersion"
+    )
+    compile("org.jboss.spec:jboss-javaee-6.0:$jbossJavaeeVersion")
+    runtime("org.jboss.as:jboss-as-arquillian-container-managed:$jbossVersion")
+}
